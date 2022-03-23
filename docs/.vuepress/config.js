@@ -1,3 +1,5 @@
+const nav = require('./nav.js');
+const sidebar = require('./sidebar.js');
 
 module.exports = {
   // base: './',
@@ -13,8 +15,8 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
-    nav: require('./nav.js'),
-    sidebar: require('./sidebar.js'),
+    nav,
+    sidebar,
     sidebarDepth: 2,
     lastUpdated: 'Last Updated',
     searchMaxSuggestoins: 10,
