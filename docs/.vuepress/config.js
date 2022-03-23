@@ -1,37 +1,20 @@
+
 module.exports = {
   // base: './',
-  title: '知码学院',
-  description: '君哥带你上王者',
-  dest: './dist',
-  port: '7777',
+  title: '领域展开',
+  description: '欢迎来到我的领域',
+  // dest: './dist',
+  port: '614',
   head: [
-    ['link', { rel: 'icon', href: '/logo.jpg' }]
+    ['link', { rel: 'icon', href: '/img/logo.jpg' }],
+    ['link', { rel: 'stylesheet', href: '/css/style.css' }]
   ],
   markdown: {
     lineNumbers: true
   },
   themeConfig: {
-    nav: [{
-      text: '懵逼指南', link: '/guide/'
-    }],
-    sidebar: {
-      '/guide/': [
-        {
-          title: '新手指南',
-          collapsable: true,
-          children: [
-            '/guide/notes/one',
-          ]
-        },
-        {
-          title: '知码学院',
-          collapsable: true,
-          children: [
-            '/guide/notes/two',
-          ]
-        }
-      ]
-    },
+    nav: require('./nav.js'),
+    sidebar: require('./sidebar.js'),
     sidebarDepth: 2,
     lastUpdated: 'Last Updated',
     searchMaxSuggestoins: 10,
