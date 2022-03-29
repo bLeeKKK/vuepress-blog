@@ -1,6 +1,15 @@
 module.exports = [
   {
+    text: '算法',
+    items: [
+      { text: '课程笔记', link: '/algorithm/curse/' },
+    ]
+  },
+  {
     text: '领域指南', link: '/guide/'
+  },
+  {
+    text: '环境', link: '/huanjing/'
   },
   {
     text: '面试宝典',

@@ -6,7 +6,7 @@ module.exports = {
   title: '领域展开',
   description: '欢迎来到我的领域',
   // dest: './dist',
-  port: '614',
+  port: '7777',
   head: [
     ['link', { rel: 'icon', href: '/img/logo.jpg' }],
     ['link', { rel: 'stylesheet', href: '/css/style.css' }]
