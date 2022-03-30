@@ -2,7 +2,7 @@ const nav = require('./nav.js');
 const sidebar = require('./sidebar.js');
 
 module.exports = {
-  // base: './',
+  base: './',
   title: '领域展开',
   description: '欢迎来到我的领域',
   // dest: './dist',
