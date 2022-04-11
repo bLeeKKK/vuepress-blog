@@ -2,6 +2,9 @@
 
 ## Exclude<UnionType, ExcludedMembers>
 
+Exclude：从联合属性中【去掉】，第二个参数中的存在值
+Extract：从联合属性中【留下】，第二个参数中的存在值
+
 ```ts
 type T0 = Exclude<"a" | "b" | "c", "a">;
 type T0 = "b" | "c"
