@@ -1,0 +1,29 @@
+# 被歧视的联合类型
+
+```ts
+// interface Shape {
+//   kind: "circle" | "square",
+//   radius?: number,
+//   sideLength?: number,
+// }
+
+interface ICircle {
+  kind: "circle",
+  radius: number,
+}
+
+interface ISquare {
+  kind: "square",
+  sideLength: number,
+}
+
+type Shape = ICircle | ISquare
+
+function getArea(shape: Shape) {
+  if (shape.kind === "circle") {
+    return Math.PI * shape.radius ** 2
+  }
+}
+
+```
+
