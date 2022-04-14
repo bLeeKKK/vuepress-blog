@@ -1,0 +1,89 @@
+# ts 中的 this
+
+1. this 参数: 限制调用函数时的 this 类型
+2. this 类型: 用于支持链式调用，尤其支持 class 继承的链式调用
+3. ThisType:用于构造复杂的 factory 函数
+
+## TS中this在普通函数中使用
+
+即使是通过非箭头函数定义的函数，当将其赋值给变量，并直接通过变量调用时，其运行时 this 执行的并非对象本身
+
+```ts
+const obj = {
+  name: "yj",
+  getName() {
+    return this.name
+  },
+}
+const fn1 = obj.getName
+fn1() // this指向的是window，运行时报错
+```
+
+很不幸，上述代码在编译期间并未检查出来，我们可以通过为getName添加this的类型标注解决该问题
+
+```ts
+interface Obj {
+  name: string
+  // 限定getName调用时的this类型
+  getName(this: Obj): string
+}
+const obj: Obj = {
+  name: "yj",
+  getName() {
+    return this.name
+  },
+}
+obj.getName() // check ok
+const fn1 = obj.getName
+fn1() // check error
+```
+
+这样我们就能报保证调用时的 this 的类型安全.
+
+关于这个作用，《TypeScript编程》第4.1.4节这样描述，此时this不是常规的参数，而是保留字，是函数签名的一部分
+
+## call 和 apply 调用
+```ts
+interface People {
+  name: string
+}
+const obj1 = {
+  name: "yj",
+  getName(this: People) {
+    return this.name
+  },
+}
+const obj2 = {
+  name: "zrj",
+}
+const obj3 = {
+  name2: "zrj",
+}
+obj1.getName.call(obj2)
+obj1.getName.call(obj3) // check error
+```
+
+## 不能使用箭头函数
+
+```ts
+interface User {
+  admin: boolean
+}
+
+interface DB {
+  filterUSers(filter: (this: User) => boolean): User[]
+}
+
+const db: DB = {
+  filterUSers: (a: (this: User) => boolean) => {
+    let user1: User = { admin: false }
+    let user2: User = { admin: true }
+    return [user1, user2]
+  }
+}
+
+const admin = db.filterUSers(function (this: User) {
+  // 这个函数不能使用箭头函数，因为箭头函数不包括 this 函数
+  return this.admin
+})
+```
