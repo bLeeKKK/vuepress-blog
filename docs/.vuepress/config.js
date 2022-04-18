@@ -3,8 +3,8 @@ const sidebar = require('./sidebar.js');
 
 module.exports = {
   base: '/',
-  title: '领域展开',
-  description: '欢迎来到我的领域',
+  title: '我的博客',
+  description: '欢迎来到我的博客',
   dest: './dist',
   port: '7777',
   head: [
