@@ -1,7 +1,8 @@
 # Partial 和 Required 的使用
 
-Partial<T>
+## Partial
 
+Partial&lt;T&gt;
 将所有属性变成【可选】
 注：只处理第一层
 
@@ -12,8 +13,9 @@ let UserInfo: Partial<UserInfo> = { name: 'xiaoming' }
 ```
 
 
-Required<T>
+## Required
 
+Required&lt;T&gt;
 将所有属性变成【必选】
 注：只处理第一层
 

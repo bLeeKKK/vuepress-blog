@@ -1,6 +1,6 @@
 # Mutable 和 Readonly 的使用
 
-Mutable<T>
+## Mutable&lt;T&gt;
 
 将所有属性变成【可修改】
 注：只处理第一层
@@ -10,7 +10,7 @@ Mutable<T>
 type Mutable<T> = { -readonly [P in keyof T]: T[P];};
 ```
 
-Readonly<T>
+## Readonly&lt;T&gt;
 
 将所有属性变成【不可修改】
 注：只处理第一层

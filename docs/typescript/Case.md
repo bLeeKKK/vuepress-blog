@@ -1,13 +1,11 @@
-# TS 字母大小写
+# 字母大小写
 
-## Uppercase、Lowercase、Capitalize、Uncapitalize
+## 让字母变换大小写
 
-让字母变换大小写
-
-Uppercase<string>
-Lowercase<string>
-Capitalize<string>
-Uncapitalize<string>
+* Uppercase&lt;string&gt;
+* Lowercase&lt;string&gt;
+* Capitalize&lt;string&gt;
+* Uncapitalize&lt;string&gt;
 
 ```ts
 // ABC

@@ -2,15 +2,15 @@
 
 ## Exclude<UnionType, ExcludedMembers>
 
-Exclude：从联合属性中【去掉】，第二个参数中的存在值
-Extract：从联合属性中【留下】，第二个参数中的存在值
+* Exclude：从联合属性中【去掉】，第二个参数中的存在值
+* Extract：从联合属性中【留下】，第二个参数中的存在值
 
 ```ts
 type T0 = Exclude<"a" | "b" | "c", "a">;
-type T0 = "b" | "c"
+// "b" | "c"
 
 type T1 = Exclude<"a" | "b" | "c", "a" | "b">;
-type T1 = "c"
+// "c"
 
 type T2 = Exclude<string | number | (() => void), Function>;
 type T2 = string | number
@@ -20,7 +20,7 @@ type T2 = string | number
 
 ```ts
 type T0 = Extract<"a" | "b" | "c", "a" | "f">;
-type T0 = "a"
+// "a"
 
 type T1 = Extract<string | number | (() => void), Function>;
 type T1 = () => void

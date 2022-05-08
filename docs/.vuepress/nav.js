@@ -9,8 +9,11 @@ module.exports = [
     text: '领域指南', link: '/guide/'
   },
   {
-    text: '环境', link: '/huanjing/'
+    text: 'TS', link: '/typescript/',
   },
+
+
+  
   {
     text: '面试宝典',
     items: [
