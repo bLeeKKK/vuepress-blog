@@ -4,20 +4,20 @@ module.exports = [
     collapsable: true,
     children: [
       '/typescript/0.type-挑战.md',
+      '/typescript/Case.md',
     ]
   },
   {
     title: 'TS工具方法',
-    collapsable: true,
     children: [
-      './Case.md',
-      './Exclude&Extract.md',
-      './Extends.md',
-      './Mutable&Readonly.md',
-      './Partial&Required.md',
-      './Record.md',
-      './ReturnType.md',
-      './Equal.md',
+      '/typescript/Case.md',
+      '/typescript/Exclude&Extract.md',
+      '/typescript/Extends.md',
+      '/typescript/Mutable&Readonly.md',
+      '/typescript/Partial&Required.md',
+      '/typescript/Record.md',
+      '/typescript/ReturnType.md',
+      '/typescript/Equal.md',
     ]
   },
 ]
