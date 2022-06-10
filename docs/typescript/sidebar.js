@@ -18,6 +18,7 @@ module.exports = [
       '/typescript/Record.md',
       '/typescript/ReturnType.md',
       '/typescript/Equal.md',
+      '/typescript/asserts&is.md',
     ]
   },
 ]

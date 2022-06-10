@@ -1,18 +1,11 @@
 module.exports = [
   {
-    text: '算法',
+    text: '工具',
     items: [
-      { text: '课程笔记', link: '/algorithm/curse/' },
+      { text: 'jest', link: '/jest/' },
+      { text: 'markdown', link: '/markdown/' },
     ]
   },
-  { text: '领域指南', link: '/guide/' },
   { text: 'TS', link: '/typescript/', },
-
-  {
-    text: '面试宝典',
-    items: [
-      { text: '初级开发篇', link: '/baodian/zero/' },
-      { text: '中高进阶篇', link: '/baodian/high/' },
-    ]
-  },
+  { text: '杂谈', link: '/gossip/', },
 ]
