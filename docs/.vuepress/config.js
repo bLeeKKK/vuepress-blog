@@ -3,8 +3,8 @@ const sidebar = require('./sidebar.js');
 
 module.exports = {
   base: '/',
-  title: '我的博客',
-  description: '欢迎来到我的博客',
+  title: '我的学习笔记',
+  description: '欢迎来到我的学习笔记',
   dest: './dist',
   port: '7777',
   head: [
@@ -28,5 +28,14 @@ module.exports = {
     },
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页 ！'
+  },
+  displayFooter: true,
+  footer: {
+    contact: [
+      {
+        type: 'github',
+        link: 'WWW.GITHUB.COM/XXX'
+      },
+    ]
   }
 }
