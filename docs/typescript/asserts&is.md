@@ -1,4 +1,5 @@
-# 类型谓词 asserts 和 is（待学习）
+# 类型谓词 asserts 和 is
+
 
 is（谓词签名）
 ```ts

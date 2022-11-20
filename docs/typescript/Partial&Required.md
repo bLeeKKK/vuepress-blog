@@ -24,5 +24,6 @@ interface UserInfo { id?: string; name?: string; }
 let UserInfo: Required<UserInfo> = { name: 'xiaoming' } // 类型 "{ name: string; }" 中缺少属性 "id"，但类型 "Required<UserInfo>" 中需要该属性
 ```
 
-ts 实现：type Required<T> = { [P in keyof T]-?: T[P] }。
+ts 实现：type Required&lt;T&gt; = { [P in keyof T]-?: T[P] }。
+
 "-?"表示去掉 "?"

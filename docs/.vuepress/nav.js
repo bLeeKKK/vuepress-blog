@@ -1,49 +1,11 @@
 module.exports = [
   {
-    text: '算法',
+    text: '工具',
     items: [
-      { text: '课程笔记', link: '/algorithm/curse/' },
+      { text: 'jest', link: '/jest/' },
+      { text: 'markdown', link: '/markdown/' },
     ]
   },
-  {
-    text: '领域指南', link: '/guide/'
-  },
-  {
-    text: 'TS', link: '/typescript/',
-  },
-
-
-  
-  {
-    text: '面试宝典',
-    items: [
-      { text: '初级开发篇', link: '/baodian/zero/' },
-      { text: '中高进阶篇', link: '/baodian/high/' },
-    ]
-  },
-  // {
-  //   text: '工具箱',
-  //   items: [
-  //     {
-  //       text: '在线编辑',
-  //       items: [
-  //         { text: '图片压缩', link: 'https://tinypng.com/' }
-  //       ]
-  //     },
-  //     {
-  //       text: '在线服务',
-  //       items: [
-  //         { text: '阿里云', link: 'https://www.aliyun.com/' },
-  //         { text: '腾讯云', link: 'https://cloud.tencent.com/' }
-  //       ]
-  //     },
-  //     {
-  //       text: '博客指南',
-  //       items: [
-  //         { text: '掘金', link: 'https://juejin.im/' },
-  //         { text: 'CSDN', link: 'https://blog.csdn.net/' }
-  //       ]
-  //     }
-  //   ]
-  // }
+  { text: 'TS', link: '/typescript/', },
+  { text: '杂谈', link: '/gossip/', },
 ]
